@@ -1,0 +1,25 @@
+Questions
+
+1. Retrieve all unique customer first names from the customer table.
+
+2. Find the top 5 customers who have spent the most money.
+
+3. List all films with a rental rate greater than 4.00.
+
+4. Count the number of payments per customer and display only customers with more than 15 payments.
+
+5. Retrieve the first 10 films alphabetically using FETCH.
+
+6. Find the total amount paid per staff member.
+
+7. List customers whose email ends with .org.
+
+8. Using DISTINCT ON, retrieve the latest payment record per customer.
+
+9. Display the average payment amount per customer, ordered from highest to lowest.
+
+10. Retrieve all payments made between $2.99 and $5.99.
+
+Bonus Challenge
+
+- Identify the top 3 cities with the highest number of customers.

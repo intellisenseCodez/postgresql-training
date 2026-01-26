@@ -1,0 +1,47 @@
+=====================================================
+DAY 04 ASSIGNMENT: PostgreSQL JOINS (dvdrental)
+=====================================================
+Instructions:
+Write SQL queries to solve the problems below.
+Use proper formatting and comments.
+
+
+-----------------------------------------------------
+Q1: List all customers along with their total payment amount.
+Output: customer_id, full_name, total_amount
+
+
+-----------------------------------------------------
+Q2: Retrieve the top 10 customers by total amount spent.
+Output: full_name, email, total_amount
+
+
+-----------------------------------------------------
+Q3: Display all films and their corresponding categories.
+Tables: film, film_category, category
+
+
+-----------------------------------------------------
+Q4: Find the number of rentals made by each customer.
+Output: customer_id, full_name, total_rentals
+
+
+-----------------------------------------------------
+Q5: List customers who have never made a payment.
+Hint: LEFT JOIN
+
+
+-----------------------------------------------------
+Q6: Show total revenue generated per store.
+Tables: store, staff, payment
+
+
+-----------------------------------------------------
+Q7: Identify the top 5 most rented movies.
+Output: film_title, rental_count
+
+
+-----------------------------------------------------
+Q8 (BONUS): Find customers who rented more than 30 films.
+Output: full_name, rental_count
+
