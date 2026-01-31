@@ -34,6 +34,14 @@
 - [Practice file](./Day%2002/practice.sql)
 - [Home Work](./Day%2002/homework.txt)
 
+**[Day 3: Basic SQL Commands Continued](./Day%2003/)**
+- [Practice file](./Day%2003/practice.sql)
+- [Home Work](./Day%2003/homework.txt)
+
+**[Day 4: SQL Joins](./Day%2004/)**
+- [Practice file](./Day%2004/practice.sql)
+- [Home Work](./Day%2004/homework.txt)
+
 
 
 **Additional Resources**:
