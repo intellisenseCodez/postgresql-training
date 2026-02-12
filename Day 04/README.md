@@ -69,8 +69,10 @@ When joining tables, your result set depends on which data you want to keep. The
 ![](https://substackcdn.com/image/fetch/$s_!A-mj!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff8eb53d2-48a3-4272-9b03-86048429ffb2_3840x1029.png)
 
 ## JOIN Types 
-![Join Types](https://substackcdn.com/image/fetch/$s_!AsEp!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5cadb3a0-fd07-42c3-92be-f2d91839781e_3840x2160.png)
+Picking the right SQL JOIN depends on what data you need. Here’s a simple decision tree to guide you:
+![SQL Join Decision Tree](https://substackcdn.com/image/fetch/$s_!9yVa!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9971644a-8a72-4e17-b6d3-e28aca418a7f_3536x2042.png)
 
+![Join Types](https://substackcdn.com/image/fetch/$s_!AsEp!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5cadb3a0-fd07-42c3-92be-f2d91839781e_3840x2160.png)
 
 ## Basic Joins 
 
@@ -279,4 +281,57 @@ Keeping all rows from one main table.
 Mixing join types for complex queries.
 
 Each JOIN type serves a different purpose, helping you get the right data for your queries!
+
+
+## Set Operators
+
+The PostgreSQL set operator is used to combine results from multiple queries into a result set. While querying, there might be a situation where you would need to combine the rows from mutliple tables rather than the columns (SQL Joins).
+
+No key column is needed here.
+
+Set Operator Types:
+- `Union`
+- `Union All`
+- `Except` (minus) and 
+- `Intersect`
+
+## Syntax
+
+![Set Operator Syntax](../images/set-operator-syntax.png)
+
+## Rules
+1.  SET Operator can be used almost in all clauses: `WHERE`, `JOIN`, `GROUP BY`, `HAVING` etc.
+
+2. `ORDER BY` is allowed only at the end of query.
+
+3. The number of columns in each query must be the same.
+
+4. Data types of columns in each query must be compatible.
+
+5. The order of the columns in each query must be the same.
+
+6. The column names in the result set are determined by the column names specified in the first query.
+
+
+### Union 
+- Returns all distinct row from both queries
+- Remove duplicate rows from the result
+
+**SQL TASK**
+
+- Combbine the first_name and last_name from customer and actor in one table.
+
+```sql
+SELECT
+	first_name,
+	last_name 
+FROM
+	customer 
+UNION
+SELECT
+	first_name,
+	last_name 
+FROM
+	actor;
+```
 
